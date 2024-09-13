@@ -27,6 +27,8 @@ class ScriptHost {
             if (x is ResultValue.Value) {
                 assert(x.value == "Done")
             }
+        } else if (result is ResultWithDiagnostics.Failure) {
+            print(result.reports)
         }
 
     }
